@@ -1,3 +1,6 @@
+
+//Show which states have more farms than others with 1000 acres of land or greater.
+
 google.load('visualization', '1', {'packages': ['geochart']});
 google.setOnLoadCallback(drawVisualization);
 
