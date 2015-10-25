@@ -2,54 +2,115 @@
 <html>
 
 <head>
-      <script type="text/javascript"></script>
 
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+<!--css -->
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--<script type="text/javascript"></script>-->
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
+<!--script for meat tree --> 
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['treemap']}]}"></script>
+
   
-   <script src="js/f.js"></script> <!-- 2 -->
+ 
 
    <link rel="stylesheet" type="text/css" src="css/dTree.css">
    <script src="js/dndTree.js"></script>
 </head>
 
 <body>
-<p> NPR: Data Driven Story Series </p>
-
-    <h3>2012 U.S. Large Farms By State</h3>
-    <p>The below map shows the number of farms across the states that are comprised of 1,000 acres of land or greater.
-      <p>Source: 2012 Census of Agriculture</p>
-<!--<div id="regions_div" style="width: 900px; height: 500px;"></div>-->
-<div id="visualization" style="margin: 1em"> </div>
+<div class="header">
+  <img src="images/npr.png">
+  <div class="htext">Data Driven Stories</div>
+</div>
+<br />
 
 
-<div id="tree"></div>
+<div class="container">
 
-    <div id="chart_div" style="width: 600px; height: 250px;"></div>
+<h1>U.S. Foodborne Pathogen Concern and CAFO's</h1>
+<p>OCTOBER 25, 2015 10:24 AM ET <br />
+<span class="authorInfo">Eliot Allan Rodriguez</span>
+</p>
+<br />
+<img src="images/cafoa.jpg"><br />
+<span class="imageNote">Source: Public Domain Images </span>
 
-
-<!-- margin: 1em -->
-<h1>CAFO Meat and Pathogens</h1>
-
-
-
-<p>DONE</p><h5>Growth of Meat Demand in the U.S.</h5>
-<p>DONE</p><h5>U.S. Cafo Farms (Choropleth)</h5>
-<h3>Explain CAFO Farm Classification (Sankey: Then & Now)</h3>
-<h3>Manure and Environmental Concerns</h3>
-<h3>Pathogens that Grow in Manure (Node Chart)</h3>
-<h3>Foodborne Disease Outbreaks by Year</h3>
-<h3>Foodborne Outbreaks 1998 - 2008 by State (Choropleth)</h3>
-<h3>Number of Outbreaks from Meat from 1998 - 2008 with Illness Count</h3>
-<h3>Pathogen Antibiotic Resistance from U.S. Trend in adding Antibiotics in Feed.</h3>
-
-<h3>Antibiotic Resistance Illustration</h3>
+<h3 class="center">Growth of Meat Demand in the U.S.</h3> 
+    <div id="chart_div" class="center" style="width: 600px; height: 250px;"></div>
+<span class="datasource">Data Source: UCSUSA </span>
+<br /><br />
 
 
 
 
 
+<h3>The U.S. CAFO</h3>
+
+<p class="indent"> Concentrated Animal Feeding Operations (CAFO), is a term coined by the US Environmental. A CAFO is a facility that raises animals at high-densities for the consumption of meat, eggs and milk. There are rewarding incentives in the current agricultural system to cultivate larger farms with lower costs that result in greater profits. This article does not focus on those rewards; instead, we wish to bring to light concern regarding the practices of these CAFO locations. Specifically, how they have the ability to impact the environment and human health through increased pathogenic cultivation. </p>
+
+<p class="indent"> Waste management in large venues like these are concerning not only in situations where the amount of manure produced exceeds the demand for manure. Circumstances where water contamination and live stock become carriers of pathogens can become very difficult to resolve. </p>
+<br /><br />
+<h4> CAFO Classification by Minimum Size of Livestock</h4>
+<p class="indent">The minimum count by animal type for a facility/farm to be considered a CAFO is shown below.</p>
+<div id="classlist" style="width: 900px; height: 400px;"></div>
+<span class="datasource">Data Source: Environmental Health Protection Agency</span>
+<br /><br /><br />
+
+
+
+<h4>CAFO Count in 2012 by State</h4>
+<div class="holdVis">
+<div id="cafoFarm" style="margin: 1em"> </div>
+</div><br />
+<span class="datasource">Data Source: 2012 Census of Agriculture </span>
+
+
+<br /><br />
+<h3>Foodborne Outbreaks 1998 - 2008 by State </h3>
+   <p class="indent"> Manure is valuable to the farming industry, but at large production quantities they become problematic. The Environmental Protection Agency has classified the single most pressing public health issue associated with CAFO locations specifically being the amount of manure they produce. Although manure contain plant nutrients such as nitrogen and phosphorus, they also contain a variety of potential contaminants including bacterial and viral pathogens. Although sewage treatment plants are required for human waste, no such treatment facility exists for livestock waste at these CAFO locations. </p>
+<div class="holdStateOutbreaks">
+<div id="stateOutbreaks" style="margin: 1em"> </div>
+</div><br />
+<span class="datasource">Data Source: Center for Disease Control (CDC) </span>
+<br /><br />
+
+<h3>Confirmed CAFO Related Pathogen Outbreaks 1998 - 2008</h3>
+<p class="indent"> There is great difficulty in determining the origins of a micro-organism, and this is especially true in situations where the pathogen is transferred through raw food and/or water. The following visualization shows the number of outbreaks and illnesses that have been confirmed by the Foodborne Disease Outbreak Surveillance System (FDOSS)between 1998 - 2008. During this time period there were a confirmed 7,998 outbreaks reported involving foodborne pathogens.</p>
+
+
+<div id="outbreakTypes" style="width: 900px; height: 400px;"></div>
+<span class="datasource">Data Source: Foodborne Disease Outbreak Surveillance System  </span>
+
+<br /><br />
+
+<h3>Number of Confirmed Pathogen Outbreaks from 1998 - 2008 with Illness Count</h3>
+<p class="indent">The FDOSS collected more specifically collected data illustrated below that show the following information: </p>
+<br />
+<p>
+<h4>Interpreting the below tree map</h4> 
+1. Comparison of Outbreaks reported by rectangle size: larger rectangles show more incident of outbreaks than smaller ones <br /><br />
+2. Comparison of Illnesses reported by color: blue hue's represent a lower amount of reported illnesses while red hue's represent a larger amount.
+</p>
+
+  <div id="meatShow" style="width: 900px; height: 500px;"></div>
+<span class="datasource">Data Source: Foodborne Disease Outbreak Surveillance System  </span>
+<br /><br />
+
+<h3>Number of Confirmed Hospitalizations and Deaths  from 1998 - 2008 with Illness Count</h3>
+<p>
+<h4>Interpreting the below tree map</h4> 
+1. Comparison of Hospitalizations reported by rectangle size: larger rectangles show more incident of hospital visits than smaller ones <br /><br />
+2. Comparison of Deaths reported by color: blue hue's represent a lower amount of reported deaths while red hue's represent a larger amount.
+</p>
+
+  <div id="meatShowTwo" style="width: 900px; height: 500px;"></div>
+<span class="datasource">Data Source: Foodborne Disease Outbreak Surveillance System  </span>
 
 
 
@@ -59,45 +120,37 @@
 
 
 
-<!--
-<p>My first paragraph.</p>
-<div style='width:900px'> <iframe src=http://www.quadrigram.com/hosting/ed_te24/untitled_project/ width='900px' height='322px' style='border: none'></iframe><span style='float: right; font-size: 10px'><a href='http://www.quadrigram.com'>Powered by Quadrigram </a></span> </div>
 
 
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Age', 'Weight'],
-          [ 8,      12],
-          [ 4,      5.5],
-          [ 11,     14],
-          [ 4,      5],
-          [ 3,      3.5],
-          [ 6.5,    7]
-        ]);
 
-        var options = {
-          title: 'U.S. Demand for Meat',
-          hAxis: {title: 'Tonnes of Meat (Per Million)', minValue: 0, maxValue: 15},
-          vAxis: {title: 'Year', minValue: 0, maxValue: 15},
-          legend: 'none'
-        };
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
 
-        chart.draw(data, options);
-      }
-    </script>
- 
-    <div id="chart_div" style="width: 70%; height: 80%;"></div>
--->
+
+
+
+
+
+
+
+
+
+
+</div> <!-- close container -->
+</body>
+
+
 
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-</body>
-
-<script src="js/meatdemand.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </html>
+
+<script src="js/cafoFarmMap.js"></script> <!-- 2 -->
+<script src="js/stateOutbreak.js"></script>
+<script src="js/meatdemand.js"></script>
+<script src="js/meatOutbreaks.js"></script>
+<script src="js/meatHosDeath.js"></script>
+<script src="js/outbreaktypes.js"></script>
+<script src="js/redraw.js"></script>
+<script src="js/classification.js"></script>

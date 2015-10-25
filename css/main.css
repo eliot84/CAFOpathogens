@@ -1,5 +1,102 @@
 
 h4{
-	color: #CCFF99;
+	
 
 }
+
+
+.datadriven{
+	color: #ffffff;
+}
+
+.header{
+	height: 200px;
+	width: 100%;
+	background-color: #262626;
+	vertical-align: bottom;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.datasource{
+	font-size: 8px;
+}
+
+.imageNote{
+	font-size: 8px;
+}
+
+.htext{
+position: absolute;
+	bottom: 0px;
+	color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container{
+	width:90%;
+    margin:50% auto;
+    background:#ffffff;
+    margin-top: 0;
+}
+
+.indent{
+	text-indent: 20px;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.dateInfo{
+
+}
+
+.authorInfo{
+	font-size: 11px;
+}
+
+#chart_div{
+	margin-bottom: 30px;
+
+}
+
+
+#cafoFarm{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width:100%;
+    height:100%;
+}
+
+#stateOutbreaks{
+	position: absolute;
+    top: 1px;
+    left: 1px;
+    width:100%;
+    height:100%;
+}
+
+
+
+
+.holdVis{
+    position: relative; 
+    width: 85%;
+    padding-bottom: 40%;
+    height: 0;
+    overflow:hidden;
+}
+
+.holdStateOutbreaks{
+    position: relative; 
+    width: 85%;
+    padding-bottom: 40%;
+    height: 0;
+    overflow:hidden;
+}
+

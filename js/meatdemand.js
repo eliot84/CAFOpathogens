@@ -125,7 +125,10 @@ function drawBasic() {
         },
         vAxis: {
           title: 'Meat in Tonnes (per 10 million)'
-        }
+        },
+        legend: 'none'
+
+
       };
 
       var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
